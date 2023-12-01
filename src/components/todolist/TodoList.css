@@ -1,0 +1,165 @@
+.container-todo {
+    margin-top: 70px;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+
+.container-todo .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 30px;
+
+}
+
+.container-todo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #593edc;
+    color: white;
+    font-size: .9rem;
+    width: 120px;
+    height: 40px;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.container-todo a p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    position: absolute;
+}
+
+.container-todo a::before {
+    content: '';
+    background-color: #8b79e9;
+    border-radius: 1rem;
+    width: 0%;
+    height: 150%;
+    left: 0;
+    position: absolute;
+    transition-duration: 300ms;
+
+}
+
+.container-todo a:hover::before {
+    width: 150%;
+}
+
+.container-todo .main h2 {
+    color: #eb4312;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-todo .main .remain {
+    color: gray;
+}
+
+.container-todo .title {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.container-todo .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    grid-gap: 30px;
+
+}
+
+.container-todo .content .todoBox {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    padding: 20px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.container-todo .bar {
+    position: absolute;
+    left: 0;
+    width: 9px;
+    height: 100%;
+    top: 0;
+}
+
+.content .todoBox .title-todo {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.content .todoBox.completed .bar {
+    opacity: .6;
+}
+
+.content .todoBox.completed .title-todo {
+    text-decoration: line-through !important;
+    opacity: .6;
+}
+
+.content .todoBox .wrap-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content .todoBox .wrap-text p {
+    margin: 0;
+}
+
+.content .todoBox .btn-wrap {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.content .todoBox .btn-wrap button {
+    border: 0;
+    font-size: 20px;
+    border-radius: .3rem;
+}
+
+.content .todoBox .btn-wrap .btn--edit {
+    background-color: #3edcd5;
+    color: white;
+
+}
+
+.content .todoBox .btn-wrap .btn--edit:hover,
+.content .todoBox .btn-wrap .btn--del:hover {
+    filter: brightness(93%);
+}
+
+.content .todoBox .btn-wrap .btn--del {
+    background-color: #ff4747;
+    color: white;
+}
+
+.loader {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

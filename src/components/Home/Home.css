@@ -1,0 +1,60 @@
+.home-container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+}
+
+.home-container .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-container .title h1 {
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #132181;
+}
+
+.home-container .title p {
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+.home-container .title p a {
+    font-weight: bold;
+    color: #dd7c23;
+    text-decoration: none;
+    position: relative;
+}
+
+.home-container .title p a::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid rgb(0, 102, 255);
+    height: 2px;
+}
+
+.home-container .title .view {
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #49cacf;
+    width: 120px;
+    height: 40px;
+    border-radius: .6rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container .title a:hover {
+    filter: brightness(110%);
+}

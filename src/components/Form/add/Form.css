@@ -1,0 +1,133 @@
+.form-container h2 {
+    text-align: center;
+    font-weight: bold;
+    margin: 70px 0 60px 0;
+    color: #eb4312;
+
+}
+
+.form-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container form textarea {
+
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: .6rem;
+
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.form-container form .wrap-userID , .form-container form .wrap-desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form .wrap-userID label,
+.form-container form .wrap-desc label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-container form .wrap-userID input[type="number"] {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: .6rem;
+    height: 50px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.form-container form textarea:focus,
+.form-container form input[type="number"]:focus {
+    outline: none;
+}
+
+.form-container form .wrap-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-container form .wrap-checkbox label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    border-radius: .3rem;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.3em;
+    height: 1.3em;
+    border: 0.15em solid currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+input[type="checkbox"]::after {
+    content: "";
+    width: 0.85em;
+    height: 0.95em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #2b66f7;
+}
+
+
+input[type="checkbox"]:checked::after {
+    transform: scale(1);
+}
+
+.form-container form button {
+    width: 150px;
+    height: 45px;
+    border: 0;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.form-container form .wrap-btn {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+}
+
+.form-container form .wrap-btn .add--btn {
+    color: white;
+    background-color: #2e4ff4;
+}
+
+.form-container form .wrap-btn .add--btn:hover,
+.form-container form .wrap-btn .cancle--btn:hover {
+    filter: brightness(90%);
+}
+
+.form-container form .wrap-btn .cancle--btn a {
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 45px;
+}

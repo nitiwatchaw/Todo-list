@@ -1,0 +1,9 @@
+.layout {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding: 70px 30px 30px 30px;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+}
