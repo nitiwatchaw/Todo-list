@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './TodoList.css'
 import { HiClipboardList } from "react-icons/hi";
 import { useQuery } from 'react-query'
@@ -66,6 +66,26 @@ const TodoList = ({ fetchData }) => {
     }
 
 
+    const [isScroll, setIsScroll] = useState(false)
+
+    useEffect(() => {
+
+        const handleScroll = () => {
+            if (window.scrollY > 650) {
+                setIsScroll(true)
+                console.log('scrolled')
+            }
+            else {
+                setIsScroll(false)
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    })
+
+
     return (
         <Box>
 
@@ -101,7 +121,9 @@ const TodoList = ({ fetchData }) => {
                     />
 
 
-                    <Link to='/todo/form' ><p><IoMdAddCircle style={{ fontSize: "16px" }} /> Add</p></Link>
+                    <Link to='/todo/form'  ><p><IoMdAddCircle style={{ fontSize: "16px" }} /> Add</p></Link>
+
+
                 </div>
                 {isLoading ?
                     <Loader>
@@ -133,6 +155,7 @@ const TodoList = ({ fetchData }) => {
 
             </motion.div>
             <ButtonUp />
+            {isScroll ? <Link to='/todo/form' className="btn--scroll"><p>ADD</p></Link> : null}
             <Update showModal={showModal} toggleModal={toggleModal} modalId={modalId} />
         </Box >
     )

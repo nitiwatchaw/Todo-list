@@ -3,6 +3,7 @@
     font-weight: bold;
     width: 100%;
     min-height: calc(100vh - 170px);
+    position: relative;
 }
 
 
@@ -29,7 +30,6 @@
     border-radius: .5rem;
     text-transform: uppercase;
     position: relative;
-
     overflow: hidden;
 }
 
@@ -209,10 +209,83 @@
     color: white;
 }
 
+.btn--scroll {
+    position: fixed;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #593edc;
+    color: white;
+    font-size: .9rem;
+    width: 120px;
+    height: 40px;
+    top: 90px;
+    right: 65px;
+    transition-duration: 500ms;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    animation: slide-in--down 420ms cubic-bezier(.165, .84, .44, 1);
+}
+
+.btn--scroll::before {
+    content: '';
+    background-color: #8b79e9;
+    border-radius: 1rem;
+    width: 0%;
+    height: 150%;
+    left: 0;
+    position: absolute;
+    transition-duration: 300ms;
+
+}
+
+.btn--scroll:hover::before {
+    width: 150%;
+}
+
+.btn--scroll p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    position: absolute;
+}
+
+@keyframes slide-in--down {
+    from {
+        top: -100px;
+
+    }
+
+    to {
+        top: 90px;
+
+    }
+}
+
 @media (max-width:765px) {
     .container-todo .title {
         flex-direction: column;
         gap: 30px;
         margin-top: 60px;
+    }
+
+    .container-todo a {
+        width: 100%;
+      
+    }
+
+    .container-todo input[type="search"] {
+        width: 100%;
+    }
+
+    .btn--scroll {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
 }

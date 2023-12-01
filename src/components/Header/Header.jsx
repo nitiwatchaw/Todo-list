@@ -13,7 +13,6 @@ const Header = ({ fetchData }) => {
     const { data } = useQuery('todo', fetchData)
 
     const [open, setOpen] = useState(false)
-
     const Ref = useRef();
 
     useEffect(() => {
@@ -22,7 +21,6 @@ const Header = ({ fetchData }) => {
                 setOpen(false);
                 document.body.classList.remove('overflow-hidden');
             }
-
         }
         const handleResize = () => {
             // Check window width and remove the 'overflow-hidden' class if width is more than 1200px
@@ -44,6 +42,7 @@ const Header = ({ fetchData }) => {
             document.body.classList.remove('overflow-hidden');
         };
     }, [open])
+
 
 
 
