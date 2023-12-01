@@ -8,10 +8,8 @@ import axios from "axios"
 import TodoList from './components/todolist/TodoList'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-
+import Slide from './components/Home/swiper/Slide'
 function App() {
-
-  const [todos, setTodos] = useState([])
 
 
   const fetchData = () => {
@@ -26,7 +24,12 @@ function App() {
       <AnimatePresence mode={'wait'} initial={false}>
         <Routes location={location} key={location.pathname} >
           <Route path='/' element={<Home />} />
-          <Route path='/todo' element={<TodoList fetchData={fetchData} todos={todos} />} />
+
+
+          <Route path='/swiper' element={<Slide  />} />
+
+
+          <Route path='/todo' element={<TodoList fetchData={fetchData} />} />
 
           <Route path='/todo/form' element={<Form />} />
           <Route path='/todo-completed' element={<Completed fetchData={fetchData} />} />

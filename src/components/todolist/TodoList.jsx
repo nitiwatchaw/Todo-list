@@ -12,12 +12,16 @@ import { IoMdAddCircle } from "react-icons/io";
 import { motion } from 'framer-motion'
 import { handleDelete } from '../service/service';
 import Update from '../Form/update/Update';
+import Lottie from 'lottie-react'
+import animationData from '../../img/ani-empty.json'
 const TodoList = ({ fetchData }) => {
 
 
     const { isLoading, data, isError, error } = useQuery('todo', fetchData)
 
     const [modalId, setModalId] = useState(null);
+
+    const [searchQuery, setSearchQuery] = useState('');
 
     if (isError) {
         return <h2>{error.message}</h2>
@@ -40,6 +44,9 @@ const TodoList = ({ fetchData }) => {
         toggleModal(id)
 
     }
+    const filteredData = data?.data.filter((todo) =>
+        todo.todo.toLowerCase().includes(searchQuery.toLowerCase())
+    );
 
     return (
         <Box>
@@ -59,13 +66,22 @@ const TodoList = ({ fetchData }) => {
                 </div>
                 <div className="title">
                     <div className="desc">
-                        <div className="">
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <FaSquare style={{ color: "#b4c4f2" }} /> : Completed
                         </div>
-                        <div className="">
+                        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <FaSquare style={{ color: "#6387f4" }} /> : Not Complete
                         </div>
                     </div>
+
+                    {/* search */}
+                    <input
+                        type="search"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search... "
+                    />
+
 
                     <Link to='/todo/form' ><p><IoMdAddCircle style={{ fontSize: "16px" }} /> Add</p></Link>
                 </div>
@@ -80,7 +96,7 @@ const TodoList = ({ fetchData }) => {
                     </Loader>
                     :
                     <div className="content">
-                        {data?.data.map((e) => {
+                        {filteredData.map((e) => {
                             return (
                                 <div key={e.id} className={`todoBox ${e.completed ? "completed" : "red"}`} >
                                     <div className="bar" style={{ backgroundColor: e.completed ? "#b4c4f2" : "#6387f4" }} />
@@ -95,7 +111,7 @@ const TodoList = ({ fetchData }) => {
                         })}
                     </div>
                 }
-
+                {filteredData && filteredData.length === 0 ? <Lottie animationData={animationData} className='ani-empty' /> : null}
 
             </motion.div>
 

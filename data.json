@@ -167,12 +167,6 @@
       "todo": "Make own LEGO creation",
       "completed": false,
       "userId": 30
-    },
-    {
-      "todo": "i wanna play",
-      "completed": false,
-      "userId": "2323",
-      "id": 32
     }
   ]
 }
