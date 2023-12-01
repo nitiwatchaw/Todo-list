@@ -14,6 +14,8 @@ import { handleDelete } from '../service/service';
 import Update from '../Form/update/Update';
 import Lottie from 'lottie-react'
 import animationData from '../../img/ani-empty.json'
+import ButtonNone from '../hook/buttonUp';
+import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 const TodoList = ({ fetchData }) => {
 
 
@@ -47,6 +49,22 @@ const TodoList = ({ fetchData }) => {
     const filteredData = data?.data.filter((todo) =>
         todo.todo.toLowerCase().includes(searchQuery.toLowerCase())
     );
+
+
+    const ButtonUp = () => {
+        const { buttonNone, pointer } = ButtonNone();
+        const shoot = () => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        }
+        return (
+            <>
+                <button className='buttonUp' onClick={shoot} style={{ opacity: buttonNone, pointerEvents: pointer }}>
+                    <MdOutlineKeyboardDoubleArrowUp />
+                </button>
+            </>
+        )
+    }
+
 
     return (
         <Box>
@@ -114,7 +132,7 @@ const TodoList = ({ fetchData }) => {
                 {filteredData && filteredData.length === 0 ? <Lottie animationData={animationData} className='ani-empty' /> : null}
 
             </motion.div>
-
+            <ButtonUp />
             <Update showModal={showModal} toggleModal={toggleModal} modalId={modalId} />
         </Box >
     )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import './App.css'
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'
@@ -18,6 +18,8 @@ function App() {
 
   const location = useLocation()
 
+
+
   return (
     <>
       <Header fetchData={fetchData} />
@@ -25,7 +27,7 @@ function App() {
         <Routes location={location} key={location.pathname} >
           <Route path='/' element={<Home />} />
 
-          <Route path='/swiper' element={<Slide  />} />
+          <Route path='/swiper' element={<Slide />} />
 
 
           <Route path='/todo' element={<TodoList fetchData={fetchData} />} />

@@ -21,7 +21,7 @@
     flex-grow: 1;
     justify-content: center;
     height: 100%;
-    transition-duration: 200ms;
+    transition-duration: 400ms;
 }
 
 .header ul li {
@@ -98,6 +98,7 @@
         flex-direction: column;
         background-color: white;
         top: 0;
+        z-index: 200;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
 
@@ -147,8 +148,34 @@
     .btn-close {
         display: block;
         position: absolute;
-        top: 12px;
+        top: 22px;
         left: 12px;
+    }
+
+    .modal-menu {
+        position: fixed;
+        background-color: rgb(0 0 0 / 51%);
+        width: 200vw;
+        height: 200vh;
+        left: 0;
+        animation: modal-fade 700ms;
+        transition-duration: 400ms;
+    }
+
+    @keyframes modal-fade {
+
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+
     }
 
 

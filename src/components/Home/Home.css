@@ -1,4 +1,4 @@
-.home-container {
+.homeLayer {
     display: grid;
     grid-template-columns: 55% 45%;
     max-width: 1300px;
@@ -9,40 +9,40 @@
     padding: 70px 30px 0px 30px;
 }
 
-.home-container .title {
+.homeLayer .title {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
 }
 
-.home-container .title h1 {
+.homeLayer .title h1 {
     font-weight: bold;
     font-size: 3.5rem;
     margin-bottom: 30px;
     color: #132181;
 }
 
-.home-container .title p {
+.homeLayer .title p {
     font-size: 1rem;
     margin-bottom: 35px;
 }
 
-.home-container .title p a {
+.homeLayer .title p a {
     font-weight: bold;
     color: #dd7c23;
     text-decoration: none;
     position: relative;
 }
 
-.home-container .title p a::after {
+.homeLayer .title p a::after {
     content: "";
     position: absolute;
     border-bottom: 1px solid rgb(0, 102, 255);
     height: 2px;
 }
 
-.home-container .title .view {
+.homeLayer .title .view {
     border: 0;
     color: white;
     font-size: 1rem;
@@ -57,12 +57,12 @@
     align-items: center;
 }
 
-.home-container .title a:hover {
+.homeLayer .title a:hover {
     filter: brightness(110%);
 }
 
 @media (max-width:1024px) {
-    .home-container {
+    .homeLayer {
         padding: 40px 40px 0px 40px;
         display: flex;
         flex-direction: column;
@@ -72,13 +72,13 @@
         min-height: calc(100vh - 120px);
     }
 
-    .home-container .title {
+    .homeLayer .title {
         order: 2;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
-    .home-container .title h1{
+    .homeLayer .title h1{
         font-size: 2.2rem;
     }
 

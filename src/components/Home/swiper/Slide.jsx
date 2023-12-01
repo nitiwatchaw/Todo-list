@@ -30,7 +30,7 @@ const Slide = () => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"   >
                 <SwiperSlide>
-                    <div className='home-container'>
+                    <div className='homeLayer'>
                         <div className="title">
                             <h1>Project Solution Todo-List Website</h1>
                             <p>This is project for <a href='https://cnxdevsoft.com/' target='_black'>
@@ -46,7 +46,7 @@ const Slide = () => {
 
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='home-container'>
+                    <div className='homeLayer'>
                         <div className="title">
                             <h1 style={{ color: "rgb(231 65 34)" }}>Smooth Animation </h1>
                             <p>Using  <a href='https://www.framer.com/motion/' target='_black'>Framermotion</a> library to manage the action and duration of motion
@@ -59,7 +59,7 @@ const Slide = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='home-container'>
+                    <div className='homeLayer'>
                         <div className="title">
                             <h1 style={{ color: "rgb(237 132 19)" }}>Minimal Style and Cleary Tone </h1>
                             <p>White color is primary and decorate with fresh color that according the palette / Clean layout that user easily to use
