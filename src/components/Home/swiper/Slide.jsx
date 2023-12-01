@@ -39,7 +39,9 @@ const Slide = () => {
                             </p>
                             <Link className='view' to="/todo">Get Start</Link>
                         </div>
-                        <Lottie animationData={animationData} className='ani' />
+                        <div className="ani-container">
+                            <Lottie animationData={animationData} className='ani' />
+                        </div>
                     </div>
 
                 </SwiperSlide>
@@ -51,7 +53,9 @@ const Slide = () => {
                             </p>
                             <Link style={{ backgroundColor: "rgb(101 138 242)" }} className='view' to="/todo">Get Start</Link>
                         </div>
-                        <Lottie animationData={animationData2} className='ani' />
+                        <div className="ani-container">
+                            <Lottie animationData={animationData2} className='ani' />
+                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
@@ -62,7 +66,9 @@ const Slide = () => {
                             </p>
                             <Link className='view' to="/todo">Get Start</Link>
                         </div>
-                        <Lottie animationData={animationData3} className='ani' />
+                        <div className="ani-container">
+                            <Lottie animationData={animationData3} className='ani' />
+                        </div>
                     </div>
                 </SwiperSlide>
 

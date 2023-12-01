@@ -39,7 +39,7 @@ const Form = () => {
                     </div>
                     <div className="wrap-desc">
                         <label htmlFor="">Description</label>
-                        <textarea placeholder='add some action' onChange={(e) => { setTodo(e.target.value) }} rows="4" cols="50" />
+                        <textarea placeholder='add some action' onChange={(e) => { setTodo(e.target.value) }} rows="4"  />
                     </div>
                     <div className="wrap-checkbox">
                         <input type="checkbox" id="complete" checked={completed} name="complete" onChange={(e) => { setCompleted(e.target.checked) }} />

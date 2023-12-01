@@ -14,7 +14,7 @@
 }
 
 .form-container form textarea {
-
+    width: 100%;
     margin: 0 auto;
     border: 1px solid black;
     border-radius: .6rem;
@@ -24,7 +24,8 @@
     font-size: 1.2rem;
 }
 
-.form-container form .wrap-userID , .form-container form .wrap-desc {
+.form-container form .wrap-userID,
+.form-container form .wrap-desc {
     display: flex;
     flex-direction: column;
 }
@@ -130,4 +131,25 @@ input[type="checkbox"]:checked::after {
     height: 100%;
     display: block;
     line-height: 45px;
+}
+
+@media (max-width:745px) {
+    .form-container form .wrap-btn {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    .form-container form{
+        gap: 0;
+    }
+    .form-container form button {
+        width: 100%;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+    .form-container h2{
+       margin: 40px 0 20px 0;
+    }
 }

@@ -54,21 +54,31 @@
     flex-direction: column;
     gap: 20px;
 }
-.modal-content .wrap-btn .update--btn{
+
+.modal-content .wrap-btn .update--btn {
     border: 0;
     color: white;
     height: 40px;
     border-radius: .3rem;
     background-color: rgb(50, 98, 241);
 }
-.modal-content .wrap-btn .cancle--btn{
+
+.modal-content .wrap-btn .cancle--btn {
     border: 0;
     color: black;
     height: 40px;
     border-radius: .3rem;
 
 }
-.modal-content .wrap-btn .cancle--btn a{
+
+.modal-content .wrap-btn .cancle--btn a {
     text-decoration: none;
     color: black;
+}
+
+@media (max-width:745px) {
+    .modal-dialog {
+        min-width: 300px;
+        padding: 50px;
+    }
 }

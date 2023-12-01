@@ -187,3 +187,10 @@
     transform: translate(-50%, -50%);
 
 }
+@media (max-width:765px) {
+    .container-todo .title {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 60px;
+    }
+}
