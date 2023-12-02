@@ -11,10 +11,18 @@ import Lottie from 'lottie-react'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './styles.css'
+import './styles.css';
+import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
 
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+import {
+    Navigation,
+    Pagination,
+    Mousewheel,
+    Keyboard,
+    Autoplay
+} from 'swiper/modules';
 
 
 
@@ -23,12 +31,20 @@ const Slide = () => {
         <div className='slide__container' >
             <Swiper
                 cssMode={true}
+                effect='fade'
+                autoplay={{ delay: 5000 }}
                 navigation={true}
                 pagination={true}
                 mousewheel={true}
                 keyboard={true}
-                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                className="mySwiper"   >
+                modules={[
+                    Navigation,
+                    Pagination,
+                    Mousewheel,
+                    Keyboard,
+                    Autoplay
+                ]}
+                className="mySwiper">
                 <SwiperSlide>
                     <div className='home__layer'>
                         <div className="home__title">

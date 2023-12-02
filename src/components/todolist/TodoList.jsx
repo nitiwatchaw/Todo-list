@@ -160,7 +160,7 @@ const TodoList = ({ fetchData }) => {
                     <p><IoMdAddCircle style={{ fontSize: "16px" }} />ADD</p>
                 </Link>
                 : null}
-            <Update showModal={showModal} toggleModal={toggleModal} modalId={modalId} />
+            <Update showModal={showModal} toggleModal={toggleModal} modalId={modalId} handleUpdate={handleUpdate} />
         </Box >
     )
 }

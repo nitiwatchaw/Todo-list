@@ -11,12 +11,15 @@ import { AnimatePresence } from 'framer-motion'
 import Slide from './components/Home/swiper/Slide'
 function App() {
 
-
+  // get all data
   const fetchData = () => {
     return axios.get('https://todo-list-m28t.onrender.com/todos')
   }
 
+
+
   const location = useLocation()
+  
 
 
 

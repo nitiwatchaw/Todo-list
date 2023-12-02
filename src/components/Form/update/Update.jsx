@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Modal } from 'react-bootstrap'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { handleUpdate } from '../../service/service'
 import './Update.css'
-const Update = ({ showModal, toggleModal, modalId }) => {
+const Update = ({ showModal, toggleModal, modalId , }) => {
 
 
     const [todo, setTodo] = useState("")
@@ -12,7 +12,7 @@ const Update = ({ showModal, toggleModal, modalId }) => {
 
     //get old value
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchSingleData = async () => {
             try {
                 if (modalId) {
                     const response = await fetch(`https://todo-list-m28t.onrender.com/todos/${modalId}`);
@@ -26,15 +26,15 @@ const Update = ({ showModal, toggleModal, modalId }) => {
             }
         };
 
-        fetchData();
+        fetchSingleData();
     }, [modalId]);
 
 
     //updated value
     const handleUpdated = (e) => {
         e.preventDefault();
+        
         handleUpdate(todo, userId, completed, modalId, toggleModal)
-
     }
 
     return (
