@@ -9,8 +9,7 @@ Currently, two official plugins are available:
 
 
 
-## open server 
+## wait about 20seconds for rendering the api 
 
-$ json-server --watch data.json --port 3001
 
 

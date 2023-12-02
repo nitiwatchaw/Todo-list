@@ -1,6 +1,8 @@
 .modal-content {
     padding: 30px;
     gap: 20px;
+    height: 540px;
+    position: relative;
 }
 
 .modal-dialog {
@@ -76,9 +78,18 @@
     color: black;
 }
 
+.loader--modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @media (max-width:745px) {
     .modal-dialog {
         min-width: 300px;
         padding: 50px;
     }
+
+
 }
