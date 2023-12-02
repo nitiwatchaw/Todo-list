@@ -35,8 +35,8 @@ const Completed = ({ fetchData }) => {
 
     return (
         <Box>
-            <div className="container-todo">
-                <div className="title-completed">
+            <div className="todoContainer">
+                <div className="title__completed">
                     <h2> <ImCheckboxChecked />Completed List</h2>
                     <p>All things you have done</p>
                 </div>
@@ -44,7 +44,7 @@ const Completed = ({ fetchData }) => {
                     variants={container}
                     initial="hidden"
                     animate="show"
-                    className="completed-content">
+                    className="completed__content">
 
                     {isLoading ?
                         <BeatLoader
@@ -52,7 +52,7 @@ const Completed = ({ fetchData }) => {
                             size={20}
                             aria-label="Loading Spinner"
                             data-testid="loader"
-                            className='loader-com' />
+                            className='loader__completed' />
                         :
                         <>
                             {data?.data.filter(todo => todo.completed).map((e) => {
@@ -60,7 +60,7 @@ const Completed = ({ fetchData }) => {
                                     <motion.div
                                         variants={item}
                                         key={e.id}
-                                        className='complete-list'>
+                                        className='complete-__list'>
                                         {e.todo}
                                         <PiNotches />
                                     </motion.div>

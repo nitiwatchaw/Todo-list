@@ -8,12 +8,12 @@
 
 }
 
-.modal-content .modal-title {
+.modal-content .modal__title {
     text-align: center;
     font-weight: bold;
 }
 
-.modal-content .modal-title span {
+.modal-content .modal__title span {
     color: #ff3737;
 }
 
@@ -40,7 +40,7 @@
     padding-left: 10px;
 }
 
-.modal-content .wrap-checkbox {
+.modal-content .form__checkbox {
     display: flex;
     justify-content: center;
     gap: 10px;

@@ -38,8 +38,8 @@ const Update = ({ showModal, toggleModal, modalId }) => {
     }
 
     return (
-        <Modal show={showModal} onHide={toggleModal} className='modal-container'>
-            <Modal.Title className='modal-title'>Update Todos <span>{modalId}</span></Modal.Title>
+        <Modal show={showModal} onHide={toggleModal} className='modal__container'>
+            <Modal.Title className='modal__title'>Update Todos <span>{modalId}</span></Modal.Title>
             <Modal.Body >
 
                 <form onSubmit={handleUpdated}  >
@@ -49,7 +49,7 @@ const Update = ({ showModal, toggleModal, modalId }) => {
                     <label htmlFor="" style={{ fontWeight: "bold", marginBottom: "10px" }}>Description</label>
                     <textarea placeholder='add some action' value={todo} onChange={(e) => { setTodo(e.target.value) }} rows="4" />
 
-                    <div className="wrap-checkbox">
+                    <div className="form__checkbox">
                         <input type="checkbox" id="complete" checked={completed} name="complete" onChange={(e) => { setCompleted(e.target.checked) }} />
                         <label >Complete</label>
 

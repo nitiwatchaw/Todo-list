@@ -1,8 +1,8 @@
-.form-container{
+.form__container{
     max-width: 900px;
     width: 100%;
 }
-.form-container h2 {
+.form__container h2 {
     text-align: center;
 
     margin: 70px 0 60px 0;
@@ -10,14 +10,14 @@
 
 }
 
-.form-container form {
+.form__container form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
 }
 
-.form-container form textarea {
+.form__container form textarea {
     width: 100%;
     margin: 0 auto;
     border: 1px solid black;
@@ -28,20 +28,20 @@
     font-size: 1rem;
 }
 
-.form-container form .wrap-userID,
-.form-container form .wrap-desc {
+.form__container form .form__userID,
+.form__container form .form__desc {
     display: flex;
     flex-direction: column;
 }
 
-.form-container form .wrap-userID label,
-.form-container form .wrap-desc label {
+.form__container form .form__userID label,
+.form__container form .form__desc label {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.form-container form .wrap-userID input[type="number"] {
+.form__container form .form__userID input[type="number"] {
     width: 100%;
     margin: 0 auto;
     border: 1px solid black;
@@ -52,19 +52,19 @@
     font-size: 1rem;
 }
 
-.form-container form textarea:focus,
-.form-container form input[type="number"]:focus {
+.form__container form textarea:focus,
+.form__container form input[type="number"]:focus {
     outline: none;
 }
 
-.form-container form .wrap-checkbox {
+.form__container form .form__checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.form-container form .wrap-checkbox label {
+.form__container form .form__checkbox label {
     font-size: 1rem;
     font-weight: bold;
     margin-left: 20px;
@@ -101,7 +101,7 @@ input[type="checkbox"]:checked::after {
     transform: scale(1);
 }
 
-.form-container form button {
+.form__container form button {
     width: 150px;
     height: 45px;
     border: 0;
@@ -111,24 +111,24 @@ input[type="checkbox"]:checked::after {
 
 }
 
-.form-container form .wrap-btn {
+.form__container form .form__btn {
     display: flex;
     justify-content: center;
     gap: 60px;
 
 }
 
-.form-container form .wrap-btn .add--btn {
+.form__container form .form__btn .add--btn {
     color: white;
     background-color: #2e4ff4;
 }
 
-.form-container form .wrap-btn .add--btn:hover,
-.form-container form .wrap-btn .cancle--btn:hover {
+.form__container form .form__btn .add--btn:hover,
+.form__container form .form__btn .cancle--btn:hover {
     filter: brightness(90%);
 }
 
-.form-container form .wrap-btn .cancle--btn a {
+.form__container form .form__btn .cancle--btn a {
     text-decoration: none;
     color: #000;
     width: 100%;
@@ -138,22 +138,22 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (max-width:745px) {
-    .form-container form .wrap-btn {
+    .form__container form .form__btn {
         flex-direction: column;
         justify-content: center;
         gap: 20px;
     }
-    .form-container form{
+    .form__container form{
         gap: 0;
     }
-    .form-container form button {
+    .form__container form button {
         width: 100%;
     }
 
-    .form-container {
+    .form__container {
         width: 100%;
     }
-    .form-container h2{
+    .form__container h2{
        margin: 40px 0 20px 0;
     }
 }

@@ -48,8 +48,8 @@ export const handleDelete = async (id) => {
 
     try {
         const response = await fetch(`http://localhost:3001/todos/${id}`, requestOptions);
-        const result = await response.json();
-        alert(`Deleted todo with ID ${id}`);
+        await response.json();
+        alert(`Deleted todo with number ${id}`);
     }
     catch (error) {
         console.error('Error:', error);

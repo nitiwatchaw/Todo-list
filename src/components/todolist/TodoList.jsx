@@ -73,7 +73,7 @@ const TodoList = ({ fetchData }) => {
         const handleScroll = () => {
             if (window.scrollY > 650) {
                 setIsScroll(true)
-                console.log('scrolled')
+
             }
             else {
                 setIsScroll(false)
@@ -90,20 +90,20 @@ const TodoList = ({ fetchData }) => {
         <Box>
 
             <motion.div
-                className="container-todo"
+                className="todoContainer"
                 initial={{ x: "-100%" }}
                 animate={{ x: "0%" }}
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 exit={{ x: "-100%" }}
             >
-                <div className="main">
+                <div className="todoContainer__header">
                     <h2> <HiClipboardList /> LIST ALL  </h2>
-                    <div className="remain">
-                        Uncomplete: {data?.data.filter(todo => !todo.completed).length} List
+                    <div className="todoContainer__subHeader">
+                        InComplete: {filteredData?.filter(todo => !todo.completed).length} List
                     </div>
                 </div>
-                <div className="title">
-                    <div className="desc">
+                <div className="todoContainer__title">
+                    <div >
                         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                             <FaSquare style={{ color: "#b4c4f2" }} /> : Completed
                         </div>
@@ -123,7 +123,6 @@ const TodoList = ({ fetchData }) => {
 
                     <Link to='/todo/form'  ><p><IoMdAddCircle style={{ fontSize: "16px" }} /> Add</p></Link>
 
-
                 </div>
                 {isLoading ?
                     <Loader>
@@ -138,10 +137,10 @@ const TodoList = ({ fetchData }) => {
                     <div className="content">
                         {filteredData.map((e) => {
                             return (
-                                <div key={e.id} className={`todoBox ${e.completed ? "completed" : "red"}`} >
-                                    <div className="bar" style={{ backgroundColor: e.completed ? "#b4c4f2" : "#6387f4" }} />
-                                    <div className="title-todo">{e.todo}</div>
-                                    <div className="btn-wrap">
+                                <div key={e.id} className={`content_box ${e.completed ? "completed" : "red"}`} >
+                                    <div className="content_box_bar" style={{ backgroundColor: e.completed ? "#b4c4f2" : "#6387f4" }} />
+                                    <div className="content_box_title">{e.todo}</div>
+                                    <div className="content_box_btn_wrap">
                                         <button className='btn--edit' onClick={() => { handleUpdate(e.id) }} ><MdEditSquare /></button>
                                         <button className='btn--del' onClick={() => { handleButtonDelete(e.id) }}><MdDelete /></button>
                                     </div>
@@ -151,11 +150,16 @@ const TodoList = ({ fetchData }) => {
                         })}
                     </div>
                 }
-                {filteredData && filteredData.length === 0 ? <Lottie animationData={animationData} className='ani-empty' /> : null}
+                {filteredData && filteredData.length === 0 ? <Lottie animationData={animationData} className='ani_empty' /> : null}
 
             </motion.div>
             <ButtonUp />
-            {isScroll ? <Link to='/todo/form' className="btn--scroll"><p>ADD</p></Link> : null}
+
+            {isScroll ?
+                <Link to='/todo/form' className="btn--scroll">
+                    <p><IoMdAddCircle style={{ fontSize: "16px" }} />ADD</p>
+                </Link>
+                : null}
             <Update showModal={showModal} toggleModal={toggleModal} modalId={modalId} />
         </Box >
     )

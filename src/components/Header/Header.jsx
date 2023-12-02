@@ -9,7 +9,7 @@ import { useQuery } from 'react-query'
 import { IoMenu } from "react-icons/io5";
 const Header = ({ fetchData }) => {
 
-    let activeClassName = "nav-active"
+    let activeClassName = "nav--active"
     const { data } = useQuery('todo', fetchData)
 
     const [open, setOpen] = useState(false)
@@ -24,7 +24,7 @@ const Header = ({ fetchData }) => {
         }
         const handleResize = () => {
             // Check window width and remove the 'overflow-hidden' class if width is more than 1200px
-            if (window.innerWidth > 621) {
+            if (window.innerWidth >= 621) {
                 document.body.classList.remove('overflow-hidden');
             }
         };
@@ -49,8 +49,8 @@ const Header = ({ fetchData }) => {
     return (
         <div className='header' >
             <Link to="/"> <img src={icon} alt="" width={55} /></Link>
-            <button onClick={() => { setOpen(!open) }} className='menu-bar'> <IoMenu /></button>
-            <ul className={`${open ? "active" : ""}`} ref={Ref} >
+            <button onClick={() => { setOpen(!open) }} className='menu__content_box_bar'> <IoMenu /></button>
+            <ul className={`${open ? "menu--active" : ""}`} ref={Ref} >
                 <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? activeClassName : undefined}><IoMdHome />Home</NavLink>
                 </li>
@@ -66,7 +66,7 @@ const Header = ({ fetchData }) => {
                 </li>
                 <button onClick={() => { setOpen(!open) }} className='btn-close'></button>
             </ul>
-            {open ? <div className="modal-menu"></div> : undefined}
+            {open ? <div className="modal__menu"></div> : undefined}
         </div >
     )
 }

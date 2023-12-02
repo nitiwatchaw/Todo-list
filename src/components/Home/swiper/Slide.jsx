@@ -20,7 +20,7 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 const Slide = () => {
     return (
-        <div className='slide-container' >
+        <div className='slide__container' >
             <Swiper
                 cssMode={true}
                 navigation={true}
@@ -30,44 +30,44 @@ const Slide = () => {
                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                 className="mySwiper"   >
                 <SwiperSlide>
-                    <div className='homeLayer'>
-                        <div className="title">
+                    <div className='home__layer'>
+                        <div className="home__title">
                             <h1>Project Solution Todo-List Website</h1>
                             <p>This is project for <a href='https://cnxdevsoft.com/' target='_black'>
                                 CNXDEVSOFT</a> about to create delete update loading and swipe
                                 with call API from JSON server port 3001
                             </p>
-                            <Link className='view' to="/todo">Get Start</Link>
+                            <Link className='home__button' to="/todo">Get Start</Link>
                         </div>
                         <div className="ani-container">
-                            <Lottie animationData={animationData} className='ani' />
+                            <Lottie animationData={animationData} className='ani--body' />
                         </div>
                     </div>
 
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='homeLayer'>
-                        <div className="title">
+                    <div className='home__layer'>
+                        <div className="home__title">
                             <h1 style={{ color: "rgb(231 65 34)" }}>Smooth Animation </h1>
                             <p>Using  <a href='https://www.framer.com/motion/' target='_black'>Framermotion</a> library to manage the action and duration of motion
                             </p>
-                            <Link style={{ backgroundColor: "rgb(101 138 242)" }} className='view' to="/todo">Get Start</Link>
+                            <Link style={{ backgroundColor: "rgb(101 138 242)" }} className='home__button' to="/todo">Get Start</Link>
                         </div>
                         <div className="ani-container">
-                            <Lottie animationData={animationData2} className='ani' />
+                            <Lottie animationData={animationData2} className='ani--body' />
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='homeLayer'>
-                        <div className="title">
+                    <div className='home__layer'>
+                        <div className="home__title">
                             <h1 style={{ color: "rgb(237 132 19)" }}>Minimal Style and Cleary Tone </h1>
                             <p>White color is primary and decorate with fresh color that according the palette / Clean layout that user easily to use
                             </p>
-                            <Link className='view' to="/todo">Get Start</Link>
+                            <Link className='home__button' to="/todo">Get Start</Link>
                         </div>
                         <div className="ani-container">
-                            <Lottie animationData={animationData3} className='ani' />
+                            <Lottie animationData={animationData3} className='ani--body' />
                         </div>
                     </div>
                 </SwiperSlide>
