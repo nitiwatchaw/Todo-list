@@ -16,7 +16,7 @@ const Update = ({ showModal, toggleModal, modalId, }) => {
         try {
             if (modalId) {
                 setLoading(true)
-                const response = await fetch(`https://todo-list-m28t.onrender.com/todos/${modalId}`);
+                const response = await fetch(`https://todo-list-il87.onrender.com/todos/${modalId}`);
                 const result = await response.json();
 
                 setTodo(result.todo);

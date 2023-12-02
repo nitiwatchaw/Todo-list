@@ -13,7 +13,7 @@ function App() {
 
   // get all data
   const fetchData = () => {
-    return axios.get('https://todo-list-m28t.onrender.com/todos')
+    return axios.get('https://todo-list-il87.onrender.com/todos')
   }
 
 

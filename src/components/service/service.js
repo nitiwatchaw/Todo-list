@@ -20,7 +20,7 @@ export const handleSubmit = async (todo, userId, completed, navigate) => {
         };
 
         try {
-            const response = await fetch("https://todo-list-m28t.onrender.com/todos/", requestOptions);
+            const response = await fetch("https://todo-list-il87.onrender.com/todos/", requestOptions);
             const result = await response.json();
             alert(`Todo added: ${result.todo}`);
             // go back page
@@ -47,7 +47,7 @@ export const handleDelete = async (id) => {
     }
 
     try {
-        const response = await fetch(`https://todo-list-m28t.onrender.com/todos/${id}`, requestOptions);
+        const response = await fetch(`https://todo-list-il87.onrender.com/todos/${id}`, requestOptions);
         await response.json();
         alert(`Deleted todo with number ${id}`);
     }
@@ -76,7 +76,7 @@ export const handleUpdate = async (todo, userId, completed, modalId, toggleModal
 
 
     try {
-        const response = await fetch(`https://todo-list-m28t.onrender.com/todos/${modalId}`, requestOptions);
+        const response = await fetch(`https://todo-list-il87.onrender.com/todos/${modalId}`, requestOptions);
         const result = await response.json();
         alert(`Todo update: ${result.id}`);
         // go back page
