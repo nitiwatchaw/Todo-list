@@ -35,7 +35,7 @@ const Slide = () => {
                             <h1>Project Solution Todo-List Website</h1>
                             <p>This is project for <a href='https://cnxdevsoft.com/' target='_black'>
                                 CNXDEVSOFT</a> about to create delete update loading and swipe
-                                with call API from JSON server port 3001
+                                with call API from JSON server https://todo-list-m28t.onrender.com
                             </p>
                             <Link className='home__button' to="/todo">Get Start</Link>
                         </div>

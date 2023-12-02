@@ -13,7 +13,7 @@ function App() {
 
 
   const fetchData = () => {
-    return axios.get('http://localhost:3001/todos')
+    return axios.get('https://todo-list-m28t.onrender.com/todos')
   }
 
   const location = useLocation()

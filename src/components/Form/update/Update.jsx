@@ -15,7 +15,7 @@ const Update = ({ showModal, toggleModal, modalId }) => {
         const fetchData = async () => {
             try {
                 if (modalId) {
-                    const response = await fetch(`http://localhost:3001/todos/${modalId}`);
+                    const response = await fetch(`https://todo-list-m28t.onrender.com/todos/${modalId}`);
                     const result = await response.json();
                     setTodo(result.todo);
                     setUserID(result.userId);
